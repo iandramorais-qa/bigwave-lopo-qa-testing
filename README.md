@@ -1,33 +1,45 @@
-# 🤖 BIGWave Digital Automation — QA & Testing Ecosystem for AI Agents
+# BigWave — Lopo QA & Testing
 
-## 🚀 Project Overview
-BIGWave Digital Automation focuses on engineering and validating multi-channel B2B AI-driven conversational agents (SDRs). This repository documents the complete Quality Assurance lifecycle—combining manual exploratory test strategies with automated web regression testing.
+QA portfolio and living test record for **Lopo**, the AI-driven WhatsApp sales/scheduling
+agent built by BigWave Automação Digital.
 
-## 🎯 The Core System (Lopo)
-The main product, **"Lopo"**, is an AI assistant orchestrated via **n8n workflows**, **OpenAI GPT-4o**, and messaging APIs (Evolution API). It automates lead qualification, business data entry, and CRM scheduling in production.
+## Overview
 
-## 🛠️ Testing Methodologies & Structure
+Lopo is a B2B conversational agent that qualifies leads (BANT), schedules appointments, and
+routes leads to a CRM spreadsheet, over WhatsApp. It is built on n8n workflow automation,
+integrated with a WhatsApp Business API gateway (Evolution API) and OpenAI GPT-4o.
 
-### 🧠 1. Manual & Conversational QA (From Field Logs)
-Before automation, extensive field logs were simulated in production with real users to challenge the AI's natural language processing (NLP):
-* **30+ Functional Test Cycles:** Covering memory retention, intent ambivalence, and API payload deliveries.
-* **Defect Triage:** Documented **15+ structured Test Cases and Bug Reports** mapping conversational drift and boundary validation rules (achieving a **90% assertiveness rate**).
-* *Artifacts location:* Checked inside the `/test-cases` directory.
+This repository documents its Quality Assurance work: both the retrospective formalization
+of early, ad-hoc testing, and the structured, ongoing certification cycle that followed
+formal QA training.
 
-### 💻 2. Automated Regression Testing (Cypress)
-To secure product delivery and prevent user interface regressions, end-to-end (E2E) automated test scripts were deployed.
-* **Framework:** Cypress & Node.js
-* **Scope:** Automating web flows, contact forms, response metrics, and multi-language element verification on the live corporate site.
+## Repository Structure
 
-## ⚙️ Tech Stack Used
-* **AI & Integration:** OpenAI GPT-4o | n8n Core | Evolution API | WhatsApp Business
-* **QA & Automation:** Cypress | JavaScript (Node.js) | SelectorsHub | GitHub Workflows
-* **Management:** Jira | ClickUp | Scrum Sprints
+- **`documentation/`** — project context, architecture overview, and QA objectives.
+- **`test-cases/`** — designed functional and integration test scenarios for the WhatsApp
+  flow.
+- **`bug-reports/`** — certification retrospective and defect log, using a standard
+  severity/acceptance-criteria format.
+- **`test-evidence/`** — execution logs and evidence collected during active test cycles
+  (populated as cycles run; not backfilled).
 
-> 📁 **Repository Status:** Structure and test artifacts are actively being uploaded.
-> Final organisation expected by **August 2026** (concurrent with LumeStack certification completion).
+## Status
 
-## 📬 Contact & Portfolio
-* **LinkedIn:** [linkedin.com/in/iandra-morais](https://www.linkedin.com/in/iandra-morais/)
-* **Live Product View:** [bigwaveautomacaodigital.com](https://bigwaveautomacaodigital.com/)
-* **Email**: [iandramorais.gaia@gmail.com]
+- **April 2026** — informal, ad-hoc QA work performed during active development, before
+  formal QA training. Reconstructed and formalized in `bug-reports/lopo-qa-certification-log.md`.
+- **June–August 2026** — formal QA training completed (LumeStack "Profissão QA" programme:
+  manual testing, API testing, SQL).
+- **September 2026** — structured two-week certification cycle in progress: test plan,
+  formal test case execution, defect tracking, and a documented go/no-go decision on whether
+  the product is ready for client-facing exposure.
+
+## Tech Stack
+
+n8n · Evolution API (WhatsApp) · OpenAI GPT-4o · Google Sheets · Google Calendar · Redis
+
+## Author
+
+**Iandra Morais** — QA Tester in transition, founder of BigWave Automação Digital.
+
+- LinkedIn: [linkedin.com/in/iandra-morais](https://linkedin.com/in/iandra-morais)
+- Live product: [bigwaveautomacaodigital.com](https://bigwaveautomacaodigital.com/)
